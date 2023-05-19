@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+.cardBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .manipulate {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: solid $gray;
+      background-color: $gray;
+      position: relative;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  
+    .add {
+  
+      &::before,
+      &::after {
+        content: "";
+        background-color: $white;
+        @include center(0);
+  
+      }
+  
+      &::before {
+        width: 7px;
+        height: 1px;
+      }
+  
+      &::after {
+        width: 1px;
+        height: 7px;
+      }
+    }
+  
+    .changeText {
+      &::before {
+        content: "";
+        background-color: $white;
+        width: 6px;
+        height: 2px;
+        @include center(-40deg);
+        border-radius: 3px 0 0 3px;
+      }
+    }
+  
+    .delete {
+  
+      &::before,
+      &::after {
+        content: "";
+        background-color: $white;
+        @include center(45deg);
+  
+      }
+  
+      &::before {
+        width: 7px;
+        height: 1px;
+      }
+  
+      &::after {
+        width: 1px;
+        height: 7px;
+      }
+    }
+  }

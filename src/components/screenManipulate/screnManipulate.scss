@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.buttonsContainer {
+    position: absolute;
+    display: flex;
+    width: 220px;
+    justify-content: space-around;
+    right: 30px;
+    top: 30px;
+    align-items: center;
+    .button {
+        position: relative;
+        width: 40px;
+        height: 35px;
+        background-color: $white;
+        border: 1px solid rgb(194, 188, 188);
+        border-radius: 2px;
+
+        &:first-child {
+            &::before {
+                content: "";
+                display: block;
+                width: 7px;
+                height: 7px;
+                border: 1px solid red;
+                border-radius: 65%;
+                @include center(0);
+            }
+        }
+    }
+
+}
+
+
+
+.center {}

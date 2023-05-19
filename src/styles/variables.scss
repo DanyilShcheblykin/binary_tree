@@ -1,0 +1,17 @@
+$gray : #808080;
+$light-gray: #ccc;
+$white: #ffffff;
+$body-background: #f8f8ff;
+
+@mixin center($rotate) {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    @if $rotate !=0 {
+      transform: translate(-50%, -50%) rotate($rotate);
+    }
+    @else {
+      transform: translate(-50%, -50%)
+    }
+}
